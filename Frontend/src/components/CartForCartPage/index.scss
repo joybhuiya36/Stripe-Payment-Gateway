@@ -1,0 +1,32 @@
+.cart-for-cartpage {
+    display: flex;
+    margin: 2em 40%;
+    .close {
+        margin-left: 3em;
+        cursor: pointer;
+        font-weight: 800;
+    }
+    .right {
+        margin-left: 2em;
+        p {
+            margin: 0.6em;
+        }
+        .plusminus {
+            margin-top: 1em;
+            display: flex;
+            align-items: center;
+            gap: 0.7em;
+            button {
+                border: none;
+                background-color: #27ad61;
+                color: white;
+                padding: 0.07em 0.35em;
+                font-size: 1.7em;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #158c49;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use "/src/styles/index.scss" as *;
+.nav {
+    background-color: $dark-gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.nav__link {
+    text-decoration: none;
+    color: white;
+    line-height: 60px;
+}
+.nav__right {
+    display: flex;
+    align-items: center;
+}
+.nav__button {
+    background-color: $forest-green;
+    border: none;
+    color: $solid-white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($forest-green, 5%);
+    }
+}

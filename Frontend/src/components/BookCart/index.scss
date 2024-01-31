@@ -1,0 +1,53 @@
+@use "/src/styles/index.scss" as *;
+
+.book-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 5px;
+    gap: 10px;
+    box-shadow: 5px 5px 10px lighten($dark-gray, 5%);
+    border-radius: 10px;
+    text-align: center;
+}
+.book-cart__image {
+    width: 134px;
+    height: 200px;
+    border: 1px solid $dark-gray;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+.book-cart__title {
+    width: 220px;
+    height: 40px;
+}
+.book-cart__author {
+    color: lighten($dark-gray, 20%);
+    font-size: 14px;
+}
+
+.book-cart__price {
+    font-size: large;
+    font-weight: 800;
+}
+.book-cart__button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: $solid-white;
+    background-color: $forest-green;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($forest-green, 5%);
+        scale: calc(1.05);
+    }
+}
