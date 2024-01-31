@@ -14,7 +14,16 @@ const CartPage = () => {
   useEffect(() => {
     getCart();
   }, [bookData]);
-  const handleCheckout = () => {};
+  const handleCheckout = () => {
+    axiosIntance
+      .post("/transaction/checkout-session", { userId: userId })
+      .then((res) => {
+        console.log(res.data);
+        const url = res?.data?.data;
+        dispatch(countZero(0));
+        window.location.replace(url);
+      });
+  };
   const handleFullRemove = (id: string, quantity: number) => {
     console.log(id, quantity);
     removeFromCart(id, quantity);
